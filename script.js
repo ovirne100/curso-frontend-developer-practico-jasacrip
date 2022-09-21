@@ -1,10 +1,29 @@
-const menuEmail = document.querySelector('.navbar-email');
-const desktopMenu = document.querySelector('.desktop-menu');
+let Menuemail = document.querySelector('.navbar-email')
+let DesktopMenu = document.querySelector('.desktop-menu')
+let carritoMenu = document.querySelector('.navbar-shopping-cart')
 
-menuEmail.addEventListener("click",toggleDestokmenu);
+let Menu3rayas = document.querySelector('.menu')
+let Menumobile = document.querySelector('.mobile-menu')
+let asidebici = document.querySelector('.product-detail')
 
-function toggleDestokmenu (){
-    
-    desktopMenu.classList.toggle('inactive')
+Menuemail.addEventListener('click', lemenudesktop);
+Menu3rayas.addEventListener('click', movilenMenu);
+carritoMenu.addEventListener('click', bicisnuevas);
+
+/*desktop en menu*/
+function lemenudesktop() {
+    DesktopMenu.classList.toggle('inactive')
+}
+
+/*movil en el menu*/
+function movilenMenu() {
+    asidebici.classList.add('inactive')
+    Menumobile.classList.toggle('inactive')
+}
+
+/*aside bicis nuevas*/
+function bicisnuevas() {
+    Menumobile.classList.add('inactive')
+    asidebici.classList.toggle('inactive')
 }
 
